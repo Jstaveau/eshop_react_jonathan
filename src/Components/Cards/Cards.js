@@ -1,9 +1,16 @@
 import './Cards.css'
+import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Cards(props) {
 
-    return <div className="col-3 m-4 bg-dark text-light p-3 card-produit rounded-3">
-            <div className='container-img-cards bg-secondary h-50 m-auto mb-4 rounded-1 p-3 d-flex justify-content-center'>
+    const navigate = useNavigate()
+
+    return <div onClick={() => {
+        navigate(`/details/${props.nom}`)
+        }} className="col-3 m-4 bg-dark text-light p-3 card-produit rounded-3">
+            <div onClick={props.getIndex()} className='container-img-cards bg-secondary h-50 m-auto mb-4 rounded-1 p-3 d-flex justify-content-center'>
                 <img className='mw-100 mh-100' src={props.img} alt="image du produit" />
             </div>
             <div>
@@ -12,9 +19,9 @@ export default function Cards(props) {
                 <p className="fs-5"> Stock : {props.stock}</p>
                 <div className='d-flex align-items-center justify-content-between'>
                     <button className='btn btn-danger text-center'>Ajouter <i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
-                    <p className='fs-3 m-0 mx-2'>{props.quantite}</p>
+                    <p className='fs-3 m-0 mx-2'>{props.quantite ? props.quantite : 0}</p>
                     <div>
-                        <button onClick={props.plus} className='btn-stock'>-</button>
+                        <button onClick={props.moins} className='btn-stock'>-</button>
                         <button onClick={props.plus} className='btn-stock'>+</button>
                     </div>
                 </div>
