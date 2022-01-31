@@ -1,0 +1,25 @@
+header li{
+    position: relative;
+    cursor: pointer;
+}
+header li::after{
+    position: absolute;
+    content: '';
+    bottom: -2px;
+    left: 50%;
+    height: 2px;
+    background-color: white;
+    width: 0px;
+    transform: translateX(-50%);
+    transition: 0.2s;
+}
+header li:hover::after{
+    width: 100%;
+}
+.img-sucette{
+    width: 200px;
+}
+
+header{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

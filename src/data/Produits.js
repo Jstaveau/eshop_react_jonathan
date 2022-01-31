@@ -18,22 +18,27 @@ import twix from '../img/twix.png'
 let produits =[
     {
         id: 1,
+        quantite: 0,
         nom: 'Bounty',
-        categorie: 'chocolat',
+        categorie: 'chocolats',
         prix: 2,
         img: bounty,
+        // desc: "Un blanc ? Un noir ? Le racisme terminé avec Bounty !",
         stock: 20
     },
     {
         id: 2,
+        quantite: 0,
         nom: 'Cheetos',
         categorie: 'chips',
+        // desc: "Les cheetos sont les bouchées au fromage les plus appréciées et les plus populaires ! Vous ne pouvez pas manger des cheetos sans lécher le fameux CHEETLE sur le bout de vos doigts.",
         prix: 1.3,
         img: cheetos,
         stock: 20
     },
     {
         id: 3,
+        quantite: 0,
         nom: 'Coca',
         categorie: 'bonbons',
         prix: 4.78,
@@ -42,6 +47,7 @@ let produits =[
     },
     {
         id: 4,
+        quantite: 0,
         nom: 'Dents de vampire',
         categorie: 'bonbons',
         prix: 4,
@@ -50,6 +56,7 @@ let produits =[
     },
     {
         id: 5,
+        quantite: 0,
         nom: 'Doritos nature',
         categorie: 'chips',
         prix: 0.4,
@@ -58,6 +65,7 @@ let produits =[
     },
     {
         id: 6,
+        quantite: 0,
         nom: 'Dragibus',
         categorie: 'bonbons',
         prix: 4.34,
@@ -66,6 +74,7 @@ let produits =[
     },
     {
         id: 7,
+        quantite: 0,
         nom: 'Bonbon Joris',
         categorie: 'bonbons',
         prix: 6,
@@ -74,7 +83,8 @@ let produits =[
     },
     {
         id: 8,
-        nom: 'Lays Ricetta Italiana',
+        quantite: 0,
+        nom: 'Lays Ricetta',
         categorie: 'chips',
         prix: 2.73,
         img: lays,
@@ -82,22 +92,25 @@ let produits =[
     },
     {
         id: 9,
+        quantite: 0,
         nom: 'Milky Way',
-        categorie: 'chocolat',
+        categorie: 'chocolats',
         prix: 10,
         img: mw,
         stock: 20
     },
     {
         id: 10,
+        quantite: 0,
         nom: 'Kinder Pingui',
-        categorie: 'chocolat',
+        categorie: 'chocolats',
         prix: 3.5,
         img: pingui,
         stock: 20
     },
     {
         id: 11,
+        quantite: 0,
         nom: 'Onion rings chips',
         categorie: 'chips',
         prix: 1.7,
@@ -106,6 +119,7 @@ let produits =[
     },
     {
         id: 12,
+        quantite: 0,
         nom: 'Lays sensation',
         categorie: 'chips',
         prix: 2,
@@ -114,14 +128,16 @@ let produits =[
     },
     {
         id: 13,
+        quantite: 0,
         nom: 'Snikers',
-        categorie: 'chocolat',
+        categorie: 'chocolats',
         prix: 2.2,
         img: snikers,
         stock: 20
     },
     {
         id: 14,
+        quantite: 0,
         nom: 'Fraises tagada',
         categorie: 'bonbons',
         prix: 3.4,
@@ -130,8 +146,9 @@ let produits =[
     },
     {
         id: 15,
+        quantite: 0,
         nom: 'Twix',
-        categorie: 'chocolat',
+        categorie: 'chocolats',
         prix: 2.7,
         img: twix,
         stock: 20
