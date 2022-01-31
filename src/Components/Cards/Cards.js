@@ -8,9 +8,11 @@ export default function Cards(props) {
     const navigate = useNavigate()
 
     return <div onClick={() => {
-        navigate(`/details/${props.nom}`)
         }} className="col-3 m-4 bg-dark text-light p-3 card-produit rounded-3">
-            <div onClick={props.getIndex()} className='container-img-cards bg-secondary h-50 m-auto mb-4 rounded-1 p-3 d-flex justify-content-center'>
+            <div onClick={() => {
+                props.getIndex()
+                navigate(`/details/${props.nom}`)
+                }} className='container-img-cards bg-secondary h-50 m-auto mb-4 rounded-1 p-3 d-flex justify-content-center'>
                 <img className='mw-100 mh-100' src={props.img} alt="image du produit" />
             </div>
             <div>

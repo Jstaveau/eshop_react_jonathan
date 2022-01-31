@@ -27,7 +27,7 @@ export default function Home(props) {
     return <div>
     <h1 className="text-center">{props.cat == '' ? 'Tous nos produits' : 'Nos ' + props.cat}</h1>
         <div className='d-flex justify-content-center container flex-wrap'>
-            {produits.map((item, index) => {
+            {produits.map((item) => {
                 if (item.categorie.includes(props.cat)) {
                     return <Cards 
                     nom={item.nom}
@@ -38,7 +38,7 @@ export default function Home(props) {
                     quantite={item.quantite}
                     moins={() => moins(item)}
                     plus={() => plus(item)}
-                    getIndex={() => getIndex(index)}
+                    getIndex={() => getIndex(item.id - 1)}
                     />
                 }
             })}
