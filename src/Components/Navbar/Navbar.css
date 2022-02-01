@@ -1,6 +1,7 @@
 header li{
     position: relative;
     cursor: pointer;
+    transition: 0.2s;
 }
 header li::after{
     position: absolute;
@@ -8,16 +9,34 @@ header li::after{
     bottom: -2px;
     left: 50%;
     height: 2px;
-    background-color: white;
     width: 0px;
     transform: translateX(-50%);
     transition: 0.2s;
 }
+.rouge::after{
+    background-color: red;
+}
+.jaune::after{
+    background-color: gold;
+}
+.vert::after{
+    background-color: yellowgreen;
+}
+.rouge:hover{
+    color: red;
+}
+.jaune:hover{
+    color: gold;
+}
+.vert:hover{
+    color: yellowgreen;
+}
+
 header li:hover::after{
     width: 100%;
 }
 .img-sucette{
-    width: 200px;
+    width: 250px;
 }
 
 header{

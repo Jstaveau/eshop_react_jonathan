@@ -1,6 +1,6 @@
 import React, { useState, useEffect}  from 'react';
 import './Navbar.css'
-import sucette from '../../img/sucette.png'
+import sucette from '../../img/logosucreyOK.png'
 import { useNavigate } from 'react-router-dom';
 
 
@@ -16,26 +16,26 @@ export default function Navbar(props) {
 
     return <header className='text-light bg-dark mb-4 d-flex flex-column align-items-center justify-content-center'>
         
-        <img src={sucette} alt="logo sucette" className='img-sucette my-4'/>
+        <img src={sucette} alt="logo sucette" className='img-sucette'/>
         <ul className='d-flex fs-5 text-uppercase'>
             <li onClick={() => {
                 props.change('')
                 navigate('/')
-        }} className='nav mx-3'>Accueil</li>
+        }} className='jaune nav mx-3'>Accueil</li>
             <li onClick={() => {
                 props.change('chocolats')
                 navigate('/')
-            }} className='nav mx-3'>Chocolats</li>
+            }} className='rouge nav mx-3'>Chocolats</li>
             <li onClick={() => {
                 props.change('bonbons')
                 navigate('/')
-            }} className='nav mx-3'>Bonbons</li>
+            }} className='vert nav mx-3'>Bonbons</li>
             <li onClick={() => {
                 props.change('chips')
                 navigate('/')
-            }} className='nav mx-3'>Chips</li>
-            <li onClick={() => navigate('/panier')} className='nav mx-3'>Panier</li>
-            <li onClick={() => navigate('/nouvel-article')} className='nav mx-3'>Admin</li>
+            }} className='jaune nav mx-3'>Chips</li>
+            <li onClick={() => navigate('/panier')} className='rouge nav mx-3'>Panier</li>
+            <li onClick={() => navigate('/nouvel-article')} className='vert nav mx-3'>Admin</li>
         </ul>
     </header>;
 }
