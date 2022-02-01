@@ -6,8 +6,13 @@ import { useNavigate } from 'react-router-dom';
 
 export default function ArticleSolo() {
     
-    const {indexProd, produits} = useContext(ProduitsContext)
+    const {indexProd, produits, addCard} = useContext(ProduitsContext)
     const navigate = useNavigate()
+
+    const acheter = (article) => {
+        addCard(article)
+        navigate('/panier')
+    }
 
     return <div>
  <div class="container d-flex justify-content-center">
@@ -31,7 +36,7 @@ export default function ArticleSolo() {
              </figcaption>
          </div>
          <div class="bottom-wrap"> 
-            <span class="btn btn-dark d-flex justify-content-center text-white">Acheter</span>
+            <span onClick={() => acheter(produits[indexProd])} class="btn btn-dark d-flex justify-content-center text-white">Acheter</span>
             <div onClick={() => {
                 navigate(`/`)
                 }} class="price-wrap">
