@@ -23,16 +23,16 @@ export default function Footer() {
 
         <ul class="list-unstyled mb-0">
           <li>
-            <a href="#!" class="text-white text-decoration-none">A propos de Sucrey</a>
+            <a class="text-white text-decoration-none">A propos de Sucrey</a>
           </li>
           <li>
-            <a href="#!" class="text-white text-decoration-none">Livraison</a>
+            <a class="text-white text-decoration-none">Livraison</a>
           </li>
           <li>
-            <a href="#!" class="text-white text-decoration-none">Conditions générales</a>
+            <a class="text-white text-decoration-none">Conditions générales</a>
           </li>
           <li>
-            <a href="#!" class="text-white text-decoration-none">Nos engagements</a>
+            <a class="text-white text-decoration-none">Nos engagements</a>
           </li>
         </ul>
       </div>
@@ -42,16 +42,16 @@ export default function Footer() {
 
         <ul class="list-unstyled text-decoration-none">
           <li>
-            <a href="#" class="text-white text-decoration-none">En promotion</a>
+            <a class="text-white text-decoration-none">En promotion</a>
           </li>
           <li>
-            <a href="#" class="text-white text-decoration-none">Nouveaux produits</a>
+            <a class="text-white text-decoration-none">Nouveaux produits</a>
           </li>
           <li>
-            <a href="#" class="text-white text-decoration-none">Nos catégories</a>
+            <a class="text-white text-decoration-none">Nos catégories</a>
           </li>
           <li>
-            <a href="#" class="text-white text-decoration-none">Commandes</a>
+            <a class="text-white text-decoration-none">Commandes</a>
           </li>
         </ul>
       </div>

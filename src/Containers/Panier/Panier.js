@@ -25,10 +25,9 @@ export default function Panier(props) {
         prixTotalIncr()
         navigate('/panier')
     }
-
-    
+    const size = panier.length
     return <div className='container'>
-        <h1 className='text-center'>Panier</h1>
+        <h1 className='text-center'>{size > 0 ? `Votre panier (${size})` : 'Votre panier est vide :('}</h1>
         {panier.map((item, index) => {
             return <PanierFinal
             img={item.img}
@@ -39,7 +38,11 @@ export default function Panier(props) {
             decr={() => moins(item)}
             />
         })}
-
-    <h2>Total à payer : {prixTotal.toFixed(2)}€</h2>
+    <div className="d-flex justify-content-between">
+    <h2>{prixTotal.toFixed(2) > 0 ? `Total à payer : ${prixTotal.toFixed(2)}€` : ""}</h2>
+    <button onClick={() => {
+    navigate(`/`)
+    }} className="btn btn-dark ms-0">{prixTotal.toFixed(2) > 0 ? `Poursuivre les achats` : <i class="fas fa-long-arrow-alt-left"></i>}</button>
+    </div>
     </div>;
 }

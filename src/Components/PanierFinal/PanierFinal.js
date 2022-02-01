@@ -10,11 +10,11 @@ export default function PanierFinal(props) {
         <div className='text-article-card'>
             <h2 className='lh-1 me-5 mb-2'>{props.nom}</h2>
             <p className='lh-1 me-3 mb-2'>Prix : {(props.prix).toFixed(2)}€ (x{props.incard} = {(props.incard * props.prix).toFixed(2)}€)</p>
-            <p className='lh-1 me-3 mb-2'>Quantite : {props.incard} unité{props.incard > 1 && 's'} dans le panier.</p>
+            <p className='lh-1 me-3 mb-2'>Quantité : {props.incard} unité{props.incard > 1 && 's'} dans le panier.</p>
         </div>
         <div>
-            <button onClick={props.decr} className='btn btn-danger border'>-</button>
-            <button onClick={props.incr} className='btn btn-success border'>+</button>
+            <button onClick={props.decr} className='btn btn-danger border'><i class="fas fa-minus"></i></button>
+            <button onClick={props.incr} className='btn btn-success border'><i class="fas fa-plus"></i></button>
         </div>
         <button className='btn btn-dark'>Supprimer</button>
     </div>;

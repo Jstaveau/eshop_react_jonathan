@@ -23,8 +23,8 @@ export default function Cards(props) {
                     <button onClick={props.acheter} className='btn btn-danger text-center'>Ajouter <i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
                     <p className='fs-3 m-0 mx-2'>{props.quantite ? props.quantite : 0}</p>
                     <div>
-                        <button onClick={props.moins} className='btn-stock'>-</button>
-                        <button onClick={props.plus} className='btn-stock'>+</button>
+                        <button onClick={props.moins} className='btn-stock'><i class="fas fa-minus"></i></button>
+                        <button onClick={props.plus} className='btn-stock'><i class="fas fa-plus"></i></button>
                     </div>
                 </div>
             </div>
