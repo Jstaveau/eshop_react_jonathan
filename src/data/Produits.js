@@ -42,7 +42,12 @@ const ProduitsContextProvider = props  => {
 
     const addCard = article => {
         if (panier.includes(article)) {
-            article.incard += article.quantite
+            if (article.quantite == 0) {
+                article.incard += 1
+                console.log(article);
+            } else {
+                article.incard += article.quantite
+            }
         } else {
             const newPanier = [...panier]
             newPanier.push(article)

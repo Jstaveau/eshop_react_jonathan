@@ -30,15 +30,16 @@ export default function ArticleSolo() {
                  </div>
              </figcaption>
          </div>
-         <div class="bottom-wrap"> <span class="btn btn-primary d-flex justify-content-center text-white"> Acheter</span>
-         <div onClick={() => {
+         <div class="bottom-wrap"> 
+            <span class="btn btn-primary d-flex justify-content-center text-white">Acheter</span>
+            <div onClick={() => {
                 navigate(`/`)
                 }} class="price-wrap">
                 <div><span class="btn btn-warning d-flex justify-content-center"> Retour </span> </div>
             </div>
              
-         </div>
-     </figure>
+        </div>
+    </figure>
  </div>
     </div>;
 }
