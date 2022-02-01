@@ -16,7 +16,7 @@ export default function ArticleSolo() {
              <div class="row">
                  <div class="col-md-9 col-xs-9"> <a href="#" class="title">{produits[indexProd].nom}</a> <span class="rated">Catégorie : {produits[indexProd].categorie}</span> </div>
                  <div class="col-md-3 col-xs-3">
-                     <div class="rating text-right"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <span class="rated">Noté 4.3/5</span> </div>
+                     <div class="rating text-right"> <i class="star fa fa-star"></i> <i class="star fa fa-star"></i> <i class="star fa fa-star"></i> <i class="star fa fa-star"></i> <span class="rated">Noté 4.3/5</span> </div>
                  </div>
              </div>
          </figcaption>
@@ -31,11 +31,11 @@ export default function ArticleSolo() {
              </figcaption>
          </div>
          <div class="bottom-wrap"> 
-            <span class="btn btn-primary d-flex justify-content-center text-white">Acheter</span>
+            <span class="btn btn-dark d-flex justify-content-center text-white">Acheter</span>
             <div onClick={() => {
                 navigate(`/`)
                 }} class="price-wrap">
-                <div><span class="btn btn-warning d-flex justify-content-center"> Retour </span> </div>
+                <div><span class="btn btn-danger d-flex justify-content-center"> Retour </span> </div>
             </div>
              
         </div>
