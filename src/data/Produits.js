@@ -1,4 +1,4 @@
-import React, {createContext, useState} from 'react';
+import React, {createContext, useState, useEffect} from 'react';
 import bounty from '../img/bounty.png';
 import cheetos from '../img/cheetos.png';
 import coca from '../img/coca.png';
@@ -26,6 +26,17 @@ const ProduitsContextProvider = props  => {
     }
 
     const [panier, setPanier] = useState([]);
+
+    useEffect(() => {
+        const data = localStorage.getItem('panier');
+        if (data) {
+            setPanier(JSON.parse(data))
+        }
+    }, [])
+    
+    useEffect(() => {
+        localStorage.setItem('panier', JSON.stringify(panier))
+    })
 
     const [prixTotal, setPrixTotal] = useState(0);
 
