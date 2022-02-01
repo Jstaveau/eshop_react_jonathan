@@ -4,7 +4,7 @@ import { ProduitsContext } from '../../data/Produits';
 import './ArticleSolo.css'
 import { useNavigate } from 'react-router-dom';
 
-export default function ArticleSolo(props) {
+export default function ArticleSolo() {
     
     const {indexProd, produits} = useContext(ProduitsContext)
     const navigate = useNavigate()
