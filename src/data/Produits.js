@@ -30,11 +30,14 @@ const ProduitsContextProvider = props  => {
     const [prixTotal, setPrixTotal] = useState(0);
 
     const prixTotalIncr = () => {
+        setPrixTotal(0)
+        let prix = 0 
         panier.forEach(e => {
-            if (e.incard) {
-                setPrixTotal(prixTotal + (e.prix * e.incard))
+            if (e.incard > 0) {
+                prix += (e.prix * e.incard)
             }
         });
+        setPrixTotal(prix)
     }
 
     const addCard = article => {

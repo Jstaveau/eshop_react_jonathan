@@ -12,7 +12,6 @@ export default function Panier(props) {
         prixTotalIncr()
     }, [panier]);
     
-
     return <div className='container'>
         <h1 className='text-center'>Panier</h1>
         {panier.map((item, index) => {
