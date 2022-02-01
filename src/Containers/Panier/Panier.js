@@ -53,7 +53,7 @@ export default function Panier(props) {
     <h2>{prixTotal.toFixed(2) > 0 ? `Total à payer : ${prixTotal.toFixed(2)}€` : ""}</h2>
     <button onClick={() => {
     navigate(`/`)
-    }} className="btn btn-dark ms-0">{prixTotal.toFixed(2) > 0 ? `Poursuivre les achats` : <i class="fas fa-long-arrow-alt-left"></i>}</button>
+    }} className="btn btn-dark ms-0">{prixTotal.toFixed(2) > 0 ? `Poursuivre mes achats` : <i class="fas fa-long-arrow-alt-left"></i>}</button>
     </div>
     </div>;
 }
