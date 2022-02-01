@@ -25,7 +25,17 @@ export default function Panier(props) {
         prixTotalIncr()
         navigate('/panier')
     }
+
+    const deleteArticle = (article) => {
+        article.stock += article.incard 
+        article.incard = 0
+        panier.splice(panier.indexOf(article), 1)
+        prixTotalIncr()
+        navigate('/panier')
+    }
+
     const size = panier.length
+
     return <div className='container'>
         <h1 className='text-center'>{size > 0 ? `Votre panier (${size})` : 'Votre panier est vide :('}</h1>
         {panier.map((item, index) => {
@@ -36,6 +46,7 @@ export default function Panier(props) {
             prix={item.prix}
             incr={() => plus(item)}
             decr={() => moins(item)}
+            supp={() => deleteArticle(item)}
             />
         })}
     <div className="d-flex justify-content-between">

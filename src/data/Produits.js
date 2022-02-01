@@ -37,6 +37,26 @@ const ProduitsContextProvider = props  => {
     useEffect(() => {
         localStorage.setItem('panier', JSON.stringify(panier))
     })
+    useEffect(() => {
+        const data = localStorage.getItem('produits');
+        if (data) {
+            setProduits(JSON.parse(data))
+        }
+    }, [])
+    
+    useEffect(() => {
+        localStorage.setItem('produits', JSON.stringify(produits))
+    })
+    useEffect(() => {
+        const data = localStorage.getItem('prixTotal');
+        if (data) {
+            setPrixTotal(JSON.parse(data))
+        }
+    }, [])
+    
+    useEffect(() => {
+        localStorage.setItem('prixTotal', JSON.stringify(prixTotal))
+    })
 
     const [prixTotal, setPrixTotal] = useState(0);
 
@@ -52,20 +72,27 @@ const ProduitsContextProvider = props  => {
     }
 
     const addCard = article => {
-        if (panier.includes(article)) {
-            if (article.quantite == 0) {
-                article.incard += 1
-                console.log(article);
+        if(article.stock > 0){
+            if (panier.includes(article)) {
+                if (article.incard > 0 && article.quantite == 0) {
+                    article.incard += 1
+                    article.stock -= 1
+                } else {
+                    article.incard += article.quantite
+                }
             } else {
-                article.incard += article.quantite
+                const newPanier = [...panier]
+                newPanier.push(article)
+                setPanier(newPanier)
+                if (article.quantite != 0 && article.quantite) {
+                    article.incard = article.quantite
+                } else {
+                    article.incard = 1
+                    article.stock -= article.incard
+                }
             }
-        } else {
-            const newPanier = [...panier]
-            newPanier.push(article)
-            article.incard = article.quantite 
-            setPanier(newPanier)
+            article.quantite = 0
         }
-        article.quantite = 0
     }
 
     const removeCard = article => {
@@ -74,8 +101,10 @@ const ProduitsContextProvider = props  => {
             newPanier.splice(newPanier.indexOf(article), 1)
             setPanier(newPanier)
             article.incard = 0
+            article.stock += 1
         } else {
             article.incard -= 1
+            article.stock += 1
         }
     }
 

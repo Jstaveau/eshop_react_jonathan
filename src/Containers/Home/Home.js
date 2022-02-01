@@ -12,7 +12,6 @@ export default function Home(props) {
     const ajouter = (article) => {
         addCard(article)
         navigate('/panier')
-        console.log(panier);
     }
 
     const plus = (item) => {

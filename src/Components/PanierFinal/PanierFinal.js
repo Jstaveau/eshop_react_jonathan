@@ -16,6 +16,6 @@ export default function PanierFinal(props) {
             <button onClick={props.decr} className='btn btn-danger border'><i class="fas fa-minus"></i></button>
             <button onClick={props.incr} className='btn btn-success border'><i class="fas fa-plus"></i></button>
         </div>
-        <button className='btn btn-dark'>Supprimer</button>
+        <button onClick={props.supp} className='btn btn-dark'>Supprimer</button>
     </div>;
 }
