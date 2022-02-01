@@ -5,9 +5,15 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Home(props) {
 
-    const {produits, setProduits, getIndex} = useContext(ProduitsContext)
+    const {produits, setProduits, getIndex, panier, addCard, removeCard} = useContext(ProduitsContext)
     
     const navigate = useNavigate()
+
+    const ajouter = (article) => {
+        addCard(article)
+        navigate('/panier')
+        console.log(panier);
+    }
 
     const plus = (item) => {
         if (item.stock > 0) {
@@ -39,6 +45,7 @@ export default function Home(props) {
                     moins={() => moins(item)}
                     plus={() => plus(item)}
                     getIndex={() => getIndex(item.id - 1)}
+                    acheter={() => ajouter(item)}
                     />
                 }
             })}

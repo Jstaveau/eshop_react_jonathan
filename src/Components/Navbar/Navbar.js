@@ -34,7 +34,7 @@ export default function Navbar(props) {
                 props.change('chips')
                 navigate('/')
             }} className='nav mx-3'>Chips</li>
-            <li className='nav mx-3'>Panier</li>
+            <li onClick={() => navigate('/panier')} className='nav mx-3'>Panier</li>
         </ul>
     </header>;
 }

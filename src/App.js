@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Footer from './Containers/Footer/Footer'
 import ProduitsContextProvider from './data/Produits';
 import ArticleSolo from './Components/ArticleSolo/ArticleSolo';
+import Panier from './Containers/Panier/Panier';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         cat={cat}
         />}/>
         <Route path='/details/:artcile' element={<ArticleSolo/>}/>
+        <Route path='/panier' element={<Panier/>}/>
       </Routes>
       <Footer/>
       </ProduitsContextProvider>

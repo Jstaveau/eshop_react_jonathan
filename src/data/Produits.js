@@ -25,6 +25,41 @@ const ProduitsContextProvider = props  => {
         setIndexProd(index)
     }
 
+    const [panier, setPanier] = useState([]);
+
+    const [prixTotal, setPrixTotal] = useState(0);
+
+    const prixTotalIncr = () => {
+        panier.forEach(e => {
+            if (e.incard) {
+                setPrixTotal(prixTotal + (e.prix * e.incard))
+            }
+        });
+    }
+
+    const addCard = article => {
+        if (panier.includes(article)) {
+            article.incard += article.quantite
+        } else {
+            const newPanier = [...panier]
+            newPanier.push(article)
+            article.incard = article.quantite 
+            setPanier(newPanier)
+        }
+        article.quantite = 0
+    }
+
+    const removeCard = article => {
+        if (article.incard == 1) {
+            const newPanier = [...panier]
+            newPanier.splice(newPanier.indexOf(article), 1)
+            setPanier(newPanier)
+            article.incard = 0
+        } else {
+            article.incard -= 1
+        }
+    }
+
     const [produits, setProduits] = useState ([
         {
             id: 1,
@@ -166,7 +201,7 @@ const ProduitsContextProvider = props  => {
     ])
 
     return (
-        <ProduitsContext.Provider value={{produits, setProduits, getIndex, indexProd}}>
+        <ProduitsContext.Provider value={{produits, setProduits, getIndex, indexProd, panier, addCard, removeCard, prixTotalIncr, prixTotal}}>
             {props.children}
         </ProduitsContext.Provider>
     )
