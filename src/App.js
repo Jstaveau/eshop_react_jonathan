@@ -7,6 +7,7 @@ import Footer from './Containers/Footer/Footer'
 import ProduitsContextProvider from './data/Produits';
 import ArticleSolo from './Components/ArticleSolo/ArticleSolo';
 import Panier from './Containers/Panier/Panier';
+import Nvxarticle from './Containers/Nvxarticle/Nvxarticle';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         />}/>
         <Route path='/details/:artcile' element={<ArticleSolo/>}/>
         <Route path='/panier' element={<Panier/>}/>
+        <Route path='/nouvel-article' element={<Nvxarticle/>}/>
       </Routes>
       <Footer/>
       </ProduitsContextProvider>
