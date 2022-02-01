@@ -1,6 +1,6 @@
 .card-produit{
-    cursor: pointer;
     height: 450px;
+    cursor: default;
 }
 
 .container-img-cards img{
@@ -12,6 +12,7 @@
 }
 
 .container-img-cards:hover img{
+    cursor: pointer;
     transform: scale(1.05);
 }
 
