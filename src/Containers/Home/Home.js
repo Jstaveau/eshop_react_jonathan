@@ -6,7 +6,6 @@ import './Home.css'
 
 export default function Home(props) {
 
-
     
     const {produits, setProduits, getIndex, indexProd, panier, addCard, removeCard} = useContext(ProduitsContext)
     
@@ -16,7 +15,8 @@ export default function Home(props) {
         addCard(article)
         changeToggle()
         getIndex(produits.indexOf(article))
-        console.log(produits.indexOf(article));
+        console.log(panier);
+        console.log(article);
         navigate('/')
     }
 

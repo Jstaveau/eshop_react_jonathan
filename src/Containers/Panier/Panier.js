@@ -37,7 +37,7 @@ export default function Panier(props) {
     const size = panier.length
 
     return <div className='container'>
-        <h1 className='text-center'>{size > 0 ? `Votre panier (${size})` : 'Votre panier est vide :('}</h1>
+        <h1 className='text-center'>{size > 0 ? `Votre panier (${size})` : 'Votre 🧺 est vide 😱'}</h1>
         {panier.map((item, index) => {
             return <PanierFinal
             img={item.img}

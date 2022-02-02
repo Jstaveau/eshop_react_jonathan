@@ -19,7 +19,6 @@ import twix from '../img/twix.png';
 
 export const ProduitsContext = createContext()
 
-
 const ProduitsContextProvider = props  => {
     
     const navigate = useNavigate()
@@ -43,6 +42,17 @@ const ProduitsContextProvider = props  => {
     })
 
     useEffect(() => {
+        const data = localStorage.getItem('produits');
+        if (data) {
+            setProduits(JSON.parse(data))
+        }
+    }, [])
+    
+    useEffect(() => {
+        localStorage.setItem('produits', JSON.stringify(produits))
+    })
+
+    useEffect(() => {
         const data = localStorage.getItem('panier');
         if (data) {
             setPanier(JSON.parse(data))
@@ -53,16 +63,7 @@ const ProduitsContextProvider = props  => {
         localStorage.setItem('panier', JSON.stringify(panier))
     })
 
-    useEffect(() => {
-        const data = localStorage.getItem('produits');
-        if (data) {
-            setProduits(JSON.parse(data))
-        }
-    }, [])
-    
-    useEffect(() => {
-        localStorage.setItem('produits', JSON.stringify(produits))
-    })
+
     useEffect(() => {
         const data = localStorage.getItem('prixTotal');
         if (data) {
@@ -93,7 +94,9 @@ const ProduitsContextProvider = props  => {
                 if (article.incard > 0 && article.quantite == 0) {
                     article.incard += 1
                     article.stock -= 1
-                } else {
+                } else if (article.quantite == 0 && !article.incard) {
+                    article.incard = 1
+                }{
                     article.incard += article.quantite
                 }
             } else {
