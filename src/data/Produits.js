@@ -1,4 +1,5 @@
 import React, {createContext, useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 import bounty from '../img/bounty.png';
 import cheetos from '../img/cheetos.png';
 import coca from '../img/coca.png';
@@ -15,10 +16,13 @@ import snikers from '../img/snikers.png';
 import tagada from '../img/tagada.png';
 import twix from '../img/twix.png';
 
+
 export const ProduitsContext = createContext()
 
-const ProduitsContextProvider = props  => {
 
+const ProduitsContextProvider = props  => {
+    
+    const navigate = useNavigate()
     const [indexProd, setIndexProd] = useState(0);
 
     const getIndex = (index) => {
@@ -124,7 +128,7 @@ const ProduitsContextProvider = props  => {
         const newArray = [...produits]
         newArray.unshift(nvxProduit)
         setProduits(newArray)
-    }
+        }
 
     const [produits, setProduits] = useState ([
         {
