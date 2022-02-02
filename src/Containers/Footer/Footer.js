@@ -9,10 +9,10 @@ export default function Footer() {
   <div class="container p-4">
     <div class="row">
       <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-        <h5 class="text-uppercase">A propos</h5>
+        <h5 class="text-uppercase">À propos</h5>
 
         <p>
-          Nous sommes une confiserie fondée en 1971 par des dentistes ayant quittés
+          Une confiserie fondée en 1971 par des dentistes ayant quittés
           leurs métiers. Depuis, ils dominent le marché des bonbons,
           Sucrey c'est beau la vie, pour les grands et les petits !
         </p>
@@ -23,7 +23,7 @@ export default function Footer() {
 
         <ul class="list-unstyled mb-0">
           <li>
-            <a class="text-white text-decoration-none">A propos de Sucrey</a>
+            <a class="text-white text-decoration-none">À propos de Sucrey</a>
           </li>
           <li>
             <a class="text-white text-decoration-none">Livraison</a>

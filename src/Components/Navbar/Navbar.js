@@ -11,7 +11,7 @@ export default function Navbar(props) {
     return <header className='text-light bg-dark mb-4 d-flex flex-column align-items-center justify-content-center'>
         
         <img src={sucette} alt="logo sucette" className='img-sucette'/>
-        <ul className='d-flex fs-5 text-uppercase'>
+        <ul className='d-flex navnav text-uppercase'>
             <li onClick={() => {
                 props.change('')
                 navigate('/')

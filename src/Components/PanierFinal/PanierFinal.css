@@ -10,3 +10,17 @@
 .text-article-card{
     width: 30%;
 }
+
+
+@media screen and (min-width: 375px) and (max-width: 576px) {
+    .div-img-panier {
+        margin-left: 10px;
+    }
+    .div-img-panier img {
+        height: 100px;
+        /* width: 80px; */
+    }
+    .text-article-card {
+        width: 80%;
+    }
+}
