@@ -116,6 +116,7 @@ const ProduitsContextProvider = props  => {
             categorie: 'chocolats',
             prix: 2,
             img: bounty,
+            note: 2,
             // desc: "Un blanc ? Un noir ? Le racisme terminé avec Bounty !",
             stock: 20
         },
@@ -124,6 +125,7 @@ const ProduitsContextProvider = props  => {
             quantite: 0,
             nom: 'Cheetos',
             categorie: 'chips',
+            note: 4,
             // desc: "Les cheetos sont les bouchées au fromage les plus appréciées et les plus populaires ! Vous ne pouvez pas manger des cheetos sans lécher le fameux CHEETLE sur le bout de vos doigts.",
             prix: 1.3,
             img: cheetos,
@@ -134,6 +136,7 @@ const ProduitsContextProvider = props  => {
             quantite: 0,
             nom: 'Coca',
             categorie: 'bonbons',
+            note: 3,
             prix: 4.78,
             img: coca,
             stock: 20
@@ -143,6 +146,7 @@ const ProduitsContextProvider = props  => {
             quantite: 0,
             nom: 'Dents de vampire',
             categorie: 'bonbons',
+            note: 4,
             prix: 4,
             img: dents,
             stock: 20
@@ -150,9 +154,10 @@ const ProduitsContextProvider = props  => {
         {
             id: 5,
             quantite: 0,
-            nom: 'Doritos nature',
+            nom: 'Nacho cheese',
             categorie: 'chips',
-            prix: 0.4,
+            note: 2,
+            prix: 0.8,
             img: doritos,
             stock: 10
         },
@@ -161,6 +166,7 @@ const ProduitsContextProvider = props  => {
             quantite: 0,
             nom: 'Dragibus',
             categorie: 'bonbons',
+            note: 4,
             prix: 4.34,
             img: dragibus,
             stock: 20
@@ -170,6 +176,7 @@ const ProduitsContextProvider = props  => {
             quantite: 0,
             nom: 'Bonbon Joris',
             categorie: 'bonbons',
+            note: 1,
             prix: 6,
             img: joris,
             stock: 7
@@ -178,6 +185,7 @@ const ProduitsContextProvider = props  => {
             id: 8,
             quantite: 0,
             nom: 'Lays Ricetta',
+            note: 3,
             categorie: 'chips',
             prix: 2.73,
             img: lays,
@@ -187,6 +195,7 @@ const ProduitsContextProvider = props  => {
             id: 9,
             quantite: 0,
             nom: 'Milky Way',
+            note: 4,
             categorie: 'chocolats',
             prix: 10,
             img: mw,
@@ -197,6 +206,7 @@ const ProduitsContextProvider = props  => {
             quantite: 0,
             nom: 'Kinder Pingui',
             categorie: 'chocolats',
+            note: 4,
             prix: 3.5,
             img: pingui,
             stock: 20
@@ -206,6 +216,7 @@ const ProduitsContextProvider = props  => {
             quantite: 0,
             nom: 'Onion rings chips',
             categorie: 'chips',
+            note: 1,
             prix: 1.7,
             img: rings,
             stock: 20
@@ -214,6 +225,7 @@ const ProduitsContextProvider = props  => {
             id: 12,
             quantite: 0,
             nom: 'Lays sensation',
+            note: 3,
             categorie: 'chips',
             prix: 2,
             img: sensation,
@@ -224,6 +236,7 @@ const ProduitsContextProvider = props  => {
             quantite: 0,
             nom: 'Snikers',
             categorie: 'chocolats',
+            note: 3,
             prix: 2.2,
             img: snikers,
             stock: 20
@@ -233,6 +246,7 @@ const ProduitsContextProvider = props  => {
             quantite: 0,
             nom: 'Fraises tagada',
             categorie: 'bonbons',
+            note: 4,
             prix: 3.4,
             img: tagada,
             stock: 20
@@ -242,6 +256,7 @@ const ProduitsContextProvider = props  => {
             quantite: 0,
             nom: 'Twix',
             categorie: 'chocolats',
+            note: 2,
             prix: 2.7,
             img: twix,
             stock: 20

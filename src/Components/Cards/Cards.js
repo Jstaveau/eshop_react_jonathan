@@ -21,7 +21,7 @@ export default function Cards(props) {
                 <p className="fs-5"> Stock : {props.stock}</p>
                 <div className='d-flex align-items-center justify-content-between'>
                     <button onClick={props.acheter} className='btn btn-danger text-center'>Ajouter <i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
-                    <p className='fs-3 m-0 mx-2'>{props.quantite ? props.quantite : 0}</p>
+                    <p className='fs-3 m-0 mx-2'>{props.quantite ? props.quantite : ""}</p>
                     <div>
                         <button onClick={props.moins} className='btn-stock'><i class="fas fa-minus"></i></button>
                         <button onClick={props.plus} className='btn-stock'><i class="fas fa-plus"></i></button>
