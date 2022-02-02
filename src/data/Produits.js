@@ -28,6 +28,17 @@ const ProduitsContextProvider = props  => {
     const [panier, setPanier] = useState([]);
 
     useEffect(() => {
+        const data = localStorage.getItem('indexProd');
+        if (data) {
+            setIndexProd(JSON.parse(data))
+        }
+    }, [])
+    
+    useEffect(() => {
+        localStorage.setItem('indexProd', JSON.stringify(indexProd))
+    })
+
+    useEffect(() => {
         const data = localStorage.getItem('panier');
         if (data) {
             setPanier(JSON.parse(data))
@@ -37,6 +48,7 @@ const ProduitsContextProvider = props  => {
     useEffect(() => {
         localStorage.setItem('panier', JSON.stringify(panier))
     })
+
     useEffect(() => {
         const data = localStorage.getItem('produits');
         if (data) {
@@ -106,6 +118,12 @@ const ProduitsContextProvider = props  => {
             article.incard -= 1
             article.stock += 1
         }
+    }
+
+    const addToProduits = (nvxProduit) => {
+        const newArray = [...produits]
+        newArray.unshift(nvxProduit)
+        setProduits(newArray)
     }
 
     const [produits, setProduits] = useState ([
@@ -264,7 +282,7 @@ const ProduitsContextProvider = props  => {
     ])
 
     return (
-        <ProduitsContext.Provider value={{produits, setProduits, getIndex, indexProd, panier, addCard, removeCard, prixTotalIncr, prixTotal}}>
+        <ProduitsContext.Provider value={{addToProduits, produits, setProduits, getIndex, indexProd, panier, addCard, removeCard, prixTotalIncr, prixTotal}}>
             {props.children}
         </ProduitsContext.Provider>
     )
