@@ -40,6 +40,7 @@ export default function Home(props) {
                     desc={item.desc}
                     stock={item.stock}
                     img={item.img}
+                    note={item.note}
                     quantite={item.quantite}
                     moins={() => moins(item)}
                     plus={() => plus(item)}

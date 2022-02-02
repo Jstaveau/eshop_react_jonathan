@@ -8,6 +8,7 @@ import ProduitsContextProvider from './data/Produits';
 import ArticleSolo from './Components/ArticleSolo/ArticleSolo';
 import Panier from './Containers/Panier/Panier';
 import Nvxarticle from './Containers/Nvxarticle/Nvxarticle';
+import PageNotFound from './Components/PageNotFound/PageNotFound';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/details/:artcile' element={<ArticleSolo/>}/>
         <Route path='/panier' element={<Panier/>}/>
         <Route path='/nouvel-article' element={<Nvxarticle/>}/>
+        <Route path='*' element={<PageNotFound/>}/>
       </Routes>
       <Footer/>
       </ProduitsContextProvider>
