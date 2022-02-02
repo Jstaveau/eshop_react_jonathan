@@ -1,0 +1,27 @@
+.confirm-panier-container{
+    position: fixed;
+    top: 50px;
+    right: 0;
+    width: 300px;
+    height: 75px;
+    overflow: hidden;
+}
+
+.confirm-panier{
+    cursor: pointer;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    transform: translateX(110%);
+    transition: ease-in-out 0.5s;
+}
+
+.confirm-panier p{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.confirm-panier-container .ajout{
+    transform: translateX(5%);
+}
