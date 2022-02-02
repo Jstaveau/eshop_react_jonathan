@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Home(props) {
 
+
+    
     const {produits, setProduits, getIndex, panier, addCard, removeCard} = useContext(ProduitsContext)
     
     const navigate = useNavigate()

@@ -5,9 +5,7 @@ body {
 a {
     text-decoration: none !important
 }
-
-.card-product-list,
-.card-product-grid {
+.card-product-list, .card-product-grid {
     margin-bottom: 52px;
 }
 
@@ -53,7 +51,6 @@ a {
     max-width: 100%;
     width: auto;
     display: inline-block;
-    -o-object-fit: cover;
     object-fit: cover
 }
 
@@ -82,22 +79,6 @@ a {
     white-space: nowrap;
     clear: both
 }
-
-.rating-stars li.stars-active {
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden
-}
-
-.rating-stars li {
-    display: block;
-    text-overflow: clip;
-    white-space: nowrap;
-    z-index: 1
-}
-
 .card-product-grid .bottom-wrap {
     padding: 18px;
     border-top: 1px solid #e4e4e4
@@ -123,9 +104,6 @@ a {
 }
 .star {
     color: orange;
-}
-.star_gray {
-    color: gray;
 }
 .img-wrap:hover {
     cursor: pointer;

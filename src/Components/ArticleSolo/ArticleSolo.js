@@ -22,12 +22,12 @@ export default function ArticleSolo() {
                         <div className="col-md-9 col-xs-9"> <a href="#" className="title text-light">{produits[indexProd].nom}</a> <span className="rated">Catégorie : {produits[indexProd].categorie}</span> </div>
                         <div className="col-md-3 col-xs-3">
                             <div className="text-end"> 
-                            {Array.from({length: produits[indexProd].note}).map((item, index) => {
-                                return <i className="star fa fa-star"></i>
-                            })} {Array.from({length: 4 - produits[indexProd].note}).map((item, index) => {
-                                return <i className="star_gray fa fa-star"></i> 
-                            })}
-                                <span className="rated">Noté {produits[indexProd].note}/4</span>
+                            {Array.from({length: produits[indexProd].note}).map(() => {
+                                return <i className="fa fa-star star"></i>
+                            })} {Array.from({length: 4 -produits[indexProd].note}).map(() => {
+                                return <i className="fa fa-star text-muted"></i> 
+                            })} 
+                                <span className="rated">Note des clients</span>
                                 {/* <i className="star_gray fa fa-star"></i>  */}
                                 </div>
                         </div>
