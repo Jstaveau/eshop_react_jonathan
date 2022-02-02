@@ -6,12 +6,6 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Navbar(props) {
 
-    // const [stickyClass, setStickyClass] = useState('');
-    // useEffect(() => {
-    //     window.addEventListener('scroll', stickNavbar);
-    //     return () => window.removeEventListener('scroll', stickNavbar)
-    // })
-
     const navigate = useNavigate()
 
     return <header className='text-light bg-dark mb-4 d-flex flex-column align-items-center justify-content-center'>
