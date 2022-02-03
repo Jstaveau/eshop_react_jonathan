@@ -33,7 +33,7 @@ export default function Panier(props) {
         prixTotalIncr()
         navigate('/panier')
     }
-
+    
     const size = panier.length
 
     return <div className='container'>
