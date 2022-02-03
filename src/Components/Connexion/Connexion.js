@@ -8,10 +8,9 @@ export default function Connexion() {
         navigate('/nouvel-article')
     }
     return <>
-        <div className="container">
+        <div className="w-75 m-auto">
             <div className="row">
-                <div className="col-lg-3 col-md-2"></div>
-                <div className="col-lg-6 col-md-8 login-box m-2 rounded">
+                <div className="col-lg-6 col-md-8 login-box m-auto rounded">
                     <div className="col-lg-12 login-key">
                         <i className="fa fa-key" aria-hidden="true"></i>
                     </div>
@@ -31,10 +30,8 @@ export default function Connexion() {
                                     <input type="password" className="form-control" required="required"/>
                                 </div>
 
-                                <div className="col-lg-12 loginbttm">
-                                    <div className="col-lg-6 login-btm login-text">
-                                    </div>
-                                    <div className="col-lg-6 login-btm login-button ms-5">
+                                <div className="col-lg-12 loginbttm d-flex justify-content-center">
+                                    <div className="login-btm login-button">
                                         <button type="submit" className="btn btn-light text-uppercase">Connexion</button>
                                     </div>
                                 </div>

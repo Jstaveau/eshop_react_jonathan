@@ -1,4 +1,5 @@
 .login-box {
+    max-width: 100%!important;
     margin-top: 75px;
     height: auto;
     background: #1A2226;
@@ -97,13 +98,7 @@ label {
     right: 0px;
 }
 
-.login-btm {
-    float: left;
-}
-
 .login-button {
-    padding-right: 0px;
-    text-align: right;
     margin-bottom: 25px;
 }
 
