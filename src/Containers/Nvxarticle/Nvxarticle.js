@@ -74,7 +74,7 @@ export default function Nvxarticle() {
                 </div>
                 <div className='col-sm-5 col-10 d-flex flex-column'>
                     <label className='fw-bold mt-3' htmlFor="prix">Prix article (en €)</label>
-                    <input onChange={prixArticle} type="number" id='prix' required="required"/>
+                    <input onChange={prixArticle} type="number" id='prix' step="any" required="required"/>
                 </div>
             </div>
             <div className='d-flex flex-column flex-sm-row align-items-center justify-content-between w-100'>
