@@ -19,12 +19,6 @@ export default function Home(props) {
         console.log(article);
         navigate('/')
     }
-
-    useEffect(() => {
-        setTimeout(() => {
-            setToggle(false)
-        }, 4000);
-    }, [panier]);
     
 
     const plus = (item) => {
@@ -46,6 +40,9 @@ export default function Home(props) {
 
     const changeToggle = () => {
         setToggle(true)
+        setTimeout(() => {
+            setToggle(false)
+        }, 4000);
     }
 
     return <div>
