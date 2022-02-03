@@ -9,7 +9,7 @@ export default function Panier(props) {
 
     const navigate = useNavigate()
 
-    const {panier, addCard, removeCard, prixTotalIncr, prixTotal} = useContext(ProduitsContext)
+    const {addCard, removeCard, prixTotalIncr, prixTotal, produits} = useContext(ProduitsContext)
 
     useEffect(() => {
         prixTotalIncr()
@@ -29,25 +29,32 @@ export default function Panier(props) {
     const deleteArticle = (article) => {
         article.stock += article.incard 
         article.incard = 0
-        panier.splice(panier.indexOf(article), 1)
+        // panier.splice(panier.indexOf(article), 1)
         prixTotalIncr()
         navigate('/panier')
     }
 
-    const size = panier.length
+    var size = 0
+    produits.forEach(e => {
+        if (e.incard > 0) {
+            size += e.incard
+        }
+    });
 
     return <div className='container'>
         <h1 className='text-center'>{size > 0 ? `Votre panier (${size})` : 'Votre 🧺 est vide 😱'}</h1>
-        {panier.map((item, index) => {
-            return <PanierFinal
-            img={item.img}
-            nom={item.nom}
-            incard={item.incard}
-            prix={item.prix}
-            incr={() => plus(item)}
-            decr={() => moins(item)}
-            supp={() => deleteArticle(item)}
+        {produits.map((item, index) => {
+            if (item.incard > 0) {
+                return <PanierFinal
+                img={item.img}
+                nom={item.nom}
+                incard={item.incard}
+                prix={item.prix}
+                incr={() => plus(item)}
+                decr={() => moins(item)}
+                supp={() => deleteArticle(item)}
             />
+            }
         })}
     <div className="d-flex justify-content-between">
     <h2>{prixTotal.toFixed(2) > 0 ? `Total à payer : ${prixTotal.toFixed(2)}€` : ""}</h2>

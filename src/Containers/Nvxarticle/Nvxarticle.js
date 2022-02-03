@@ -9,6 +9,7 @@ export default function Nvxarticle() {
 
     const [article, setArticle] = useState({
         id: produits.length + 1,
+        incard: 0,
         quantite: 0,
         nom : '',
         stock: 0,
