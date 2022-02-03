@@ -19,7 +19,6 @@ import twix from '../img/twix.png';
 
 export const ProduitsContext = createContext()
 
-
 const ProduitsContextProvider = props  => {
     
     const navigate = useNavigate()
@@ -29,7 +28,7 @@ const ProduitsContextProvider = props  => {
         setIndexProd(index)
     }
 
-    const [panier, setPanier] = useState([]);
+    // const [panier, setPanier] = useState([]);
 
     useEffect(() => {
         const data = localStorage.getItem('indexProd');
@@ -43,17 +42,6 @@ const ProduitsContextProvider = props  => {
     })
 
     useEffect(() => {
-        const data = localStorage.getItem('panier');
-        if (data) {
-            setPanier(JSON.parse(data))
-        }
-    }, [])
-    
-    useEffect(() => {
-        localStorage.setItem('panier', JSON.stringify(panier))
-    })
-
-    useEffect(() => {
         const data = localStorage.getItem('produits');
         if (data) {
             setProduits(JSON.parse(data))
@@ -63,6 +51,19 @@ const ProduitsContextProvider = props  => {
     useEffect(() => {
         localStorage.setItem('produits', JSON.stringify(produits))
     })
+
+    // useEffect(() => {
+    //     const data = localStorage.getItem('panier');
+    //     if (data) {
+    //         setPanier(JSON.parse(data))
+    //     }
+    // }, [])
+    
+    // useEffect(() => {
+    //     localStorage.setItem('panier', JSON.stringify(panier))
+    // })
+
+
     useEffect(() => {
         const data = localStorage.getItem('prixTotal');
         if (data) {
@@ -79,7 +80,7 @@ const ProduitsContextProvider = props  => {
     const prixTotalIncr = () => {
         setPrixTotal(0)
         let prix = 0 
-        panier.forEach(e => {
+        produits.forEach(e => {
             if (e.incard > 0) {
                 prix += (e.prix * e.incard)
             }
@@ -89,22 +90,19 @@ const ProduitsContextProvider = props  => {
 
     const addCard = article => {
         if(article.stock > 0){
-            if (panier.includes(article)) {
-                if (article.incard > 0 && article.quantite == 0) {
+            if (article.incard > 0) {
+                if (article.quantite == 0) {
                     article.incard += 1
                     article.stock -= 1
                 } else {
                     article.incard += article.quantite
                 }
-            } else {
-                const newPanier = [...panier]
-                newPanier.push(article)
-                setPanier(newPanier)
-                if (article.quantite != 0 && article.quantite) {
+            } else if (article.incard == 0){
+                if (article.quantite != 0) {
                     article.incard = article.quantite
                 } else {
-                    article.incard = 1
-                    article.stock -= article.incard
+                    article.incard += 1
+                    article.stock -= 1
                 }
             }
             article.quantite = 0
@@ -113,9 +111,6 @@ const ProduitsContextProvider = props  => {
 
     const removeCard = article => {
         if (article.incard == 1) {
-            const newPanier = [...panier]
-            newPanier.splice(newPanier.indexOf(article), 1)
-            setPanier(newPanier)
             article.incard = 0
             article.stock += 1
         } else {
@@ -130,9 +125,15 @@ const ProduitsContextProvider = props  => {
         setProduits(newArray)
         }
 
+    useEffect(() => {
+        console.log(produits);
+    }, []);
+    
+
     const [produits, setProduits] = useState ([
         {
             id: 1,
+            incard: 0,
             quantite: 0,
             nom: 'Bounty',
             categorie: 'chocolats',
@@ -144,6 +145,7 @@ const ProduitsContextProvider = props  => {
         },
         {
             id: 2,
+            incard: 0,
             quantite: 0,
             nom: 'Cheetos',
             categorie: 'chips',
@@ -155,6 +157,7 @@ const ProduitsContextProvider = props  => {
         },
         {
             id: 3,
+            incard: 0,
             quantite: 0,
             nom: 'Coca',
             categorie: 'bonbons',
@@ -165,6 +168,7 @@ const ProduitsContextProvider = props  => {
         },
         {
             id: 4,
+            incard: 0,
             quantite: 0,
             nom: 'Dents de vampire',
             categorie: 'bonbons',
@@ -175,6 +179,7 @@ const ProduitsContextProvider = props  => {
         },
         {
             id: 5,
+            incard: 0,
             quantite: 0,
             nom: 'Nacho cheese',
             categorie: 'chips',
@@ -185,6 +190,7 @@ const ProduitsContextProvider = props  => {
         },
         {
             id: 6,
+            incard: 0,
             quantite: 0,
             nom: 'Dragibus',
             categorie: 'bonbons',
@@ -195,6 +201,7 @@ const ProduitsContextProvider = props  => {
         },
         {
             id: 7,
+            incard: 0,
             quantite: 0,
             nom: 'Bonbon Joris',
             categorie: 'bonbons',
@@ -205,6 +212,7 @@ const ProduitsContextProvider = props  => {
         },
         {
             id: 8,
+            incard: 0,
             quantite: 0,
             nom: 'Lays Ricetta',
             note: 3,
@@ -215,6 +223,7 @@ const ProduitsContextProvider = props  => {
         },
         {
             id: 9,
+            incard: 0,
             quantite: 0,
             nom: 'Milky Way',
             note: 4,
@@ -225,6 +234,7 @@ const ProduitsContextProvider = props  => {
         },
         {
             id: 10,
+            incard: 0,
             quantite: 0,
             nom: 'Kinder Pingui',
             categorie: 'chocolats',
@@ -235,6 +245,7 @@ const ProduitsContextProvider = props  => {
         },
         {
             id: 11,
+            incard: 0,
             quantite: 0,
             nom: 'Onion rings chips',
             categorie: 'chips',
@@ -245,6 +256,7 @@ const ProduitsContextProvider = props  => {
         },
         {
             id: 12,
+            incard: 0,
             quantite: 0,
             nom: 'Lays sensation',
             note: 3,
@@ -255,6 +267,7 @@ const ProduitsContextProvider = props  => {
         },
         {
             id: 13,
+            incard: 0,
             quantite: 0,
             nom: 'Snikers',
             categorie: 'chocolats',
@@ -265,6 +278,7 @@ const ProduitsContextProvider = props  => {
         },
         {
             id: 14,
+            incard: 0,
             quantite: 0,
             nom: 'Fraises tagada',
             categorie: 'bonbons',
@@ -275,6 +289,7 @@ const ProduitsContextProvider = props  => {
         },
         {
             id: 15,
+            incard: 0,
             quantite: 0,
             nom: 'Twix',
             categorie: 'chocolats',
@@ -286,7 +301,7 @@ const ProduitsContextProvider = props  => {
     ])
 
     return (
-        <ProduitsContext.Provider value={{addToProduits, produits, setProduits, getIndex, indexProd, panier, addCard, removeCard, prixTotalIncr, prixTotal}}>
+        <ProduitsContext.Provider value={{addToProduits, produits, setProduits, getIndex, indexProd, addCard, removeCard, prixTotalIncr, prixTotal}}>
             {props.children}
         </ProduitsContext.Provider>
     )
