@@ -45,7 +45,7 @@ header{
 
 @media (min-width: 375px) { 
     .navnav {
-        font-size: 8px;
+        font-size: 12px;
         margin-right: 35px;
     }
     .img-sucette {
@@ -53,16 +53,37 @@ header{
     }
     ul {
         font-size: 12.5px;
-
+        width: 100%;
     }
 
- }
+}
+
+.btnToggle{
+    position: absolute;
+    top: 120px;
+    right: 10px;
+    font-size: 25px!important;
+    transition: 0.3s;
+}
+
+.btnToggleOuvert{
+    transform: rotate(180deg);
+}
+
+@media (max-width: 575.9px){
+    .navnav li{
+        margin: 10px 0;
+        width: 100%;
+        border-bottom: solid 1px;
+    }
+}
+
 
 /* test */
 
 @media (min-width: 425px) { 
     .navnav {
-        font-size: 10px;
+        font-size: 14px;
         margin-right: 35px;
     }
     .img-sucette {
@@ -73,9 +94,9 @@ header{
 
     }
 
- }
+}
 
- @media (min-width: 768px) { 
+@media (min-width: 768px) { 
     .navnav {
         font-size: 20px;
     }
@@ -83,9 +104,9 @@ header{
         width: 200px;
     }
 
- }
+}
 
- @media (min-width: 1024px) { 
+@media (min-width: 1024px) { 
     .navnav {
         font-size: 25px;
     }
@@ -93,4 +114,4 @@ header{
         width: 260px;
     }
 
- }
+}
