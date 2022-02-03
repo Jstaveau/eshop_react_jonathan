@@ -9,6 +9,7 @@ import ArticleSolo from './Components/ArticleSolo/ArticleSolo';
 import Panier from './Containers/Panier/Panier';
 import Nvxarticle from './Containers/Nvxarticle/Nvxarticle';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
+import Connexion from './Components/Connexion/Connexion';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <Route path='/details/:artcile' element={<ArticleSolo/>}/>
         <Route path='/panier' element={<Panier/>}/>
         <Route path='/nouvel-article' element={<Nvxarticle/>}/>
+        <Route path='/connexion' element={<Connexion/>}/>
         <Route path='*' element={<PageNotFound/>}/>
       </Routes>
       <Footer/>

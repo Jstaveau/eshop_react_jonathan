@@ -52,7 +52,7 @@ export default function Navbar(props) {
                 navigate('/')
             }} className='jaune nav mx-3'>Chips</li>
             <li onClick={() => navigate('/panier')} className='rouge nav mx-3'>Panier</li>
-            <li onClick={() => navigate('/nouvel-article')} className='vert nav mx-3'>Admin</li>
+            <li onClick={() => navigate('/connexion')} className='vert nav mx-3'>Admin</li>
         </ul>
         <i onClick={changeMenu} class={toggleMenu ? "fas btnToggle fa-caret-square-down btnToggleOuvert" : largeur < 575 ? "fas btnToggle fa-caret-square-down" : 'd-none'}></i>
     </header>;
