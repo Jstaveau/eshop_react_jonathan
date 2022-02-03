@@ -7,7 +7,7 @@ import './Home.css'
 export default function Home(props) {
 
     
-    const {produits, setProduits, getIndex, indexProd, panier, addCard, removeCard} = useContext(ProduitsContext)
+    const { produits, setProduits, getIndex, indexProd, panier, addCard, removeCard } = useContext(ProduitsContext)
     
     const navigate = useNavigate()
 

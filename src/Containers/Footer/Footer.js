@@ -45,9 +45,6 @@ export default function Footer() {
             <a class="text-white text-decoration-none">En promotion</a>
           </li>
           <li>
-            <a class="text-white text-decoration-none">Nouveaux produits</a>
-          </li>
-          <li>
             <a class="text-white text-decoration-none">Nos catégories</a>
           </li>
           <li>
