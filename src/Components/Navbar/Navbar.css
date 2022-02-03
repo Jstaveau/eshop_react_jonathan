@@ -78,9 +78,6 @@ header{
     }
 }
 
-
-/* test */
-
 @media (min-width: 425px) { 
     .navnav {
         font-size: 14px;
@@ -103,7 +100,6 @@ header{
     .img-sucette {
         width: 200px;
     }
-
 }
 
 @media (min-width: 1024px) { 
