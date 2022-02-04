@@ -15,9 +15,9 @@ function App() {
 
   const [cat, setCat] = useState('');
 
-    const changeCat = newcat => {
-        setCat(newcat)
-    }
+  const changeCat = newcat => {
+      setCat(newcat)
+  }
 
   return (
   <ProduitsContextProvider>

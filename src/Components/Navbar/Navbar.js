@@ -31,7 +31,7 @@ export default function Navbar(props) {
     }, []);
     
 
-    return <header className='text-light bg-dark mb-4 d-flex flex-column align-items-center justify-content-center'>
+    return <header className='text-light mb-4 d-flex flex-column align-items-center justify-content-center'>
         
         <img onClick={() => navigate('/')} src={sucette} alt="logo sucette" className='img-sucette '/>
         <ul className={(toggleMenu || largeur > 575 ) ? 'd-flex flex-column align-items-center justify-content-center flex-sm-row navnav text-uppercase' : 'd-none'}>

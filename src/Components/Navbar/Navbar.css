@@ -39,10 +39,22 @@ header li:hover::after{
     width: 250px;
 }
 
-header{
+header, footer{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    animation: background 5s alternate infinite;
 }
-
+@-webkit-keyframes background {
+    0% { background-color: #f99; }
+    33% { background-color: #9f9; }
+    67% { background-color: #99f; }
+    100% { background-color: rgb(253, 229, 93); }
+}
+@keyframes background {
+    0% { background-color: #f99; }
+    33% { background-color: #9f9; }
+    67% { background-color: #99f; }
+    100% { background-color: rgb(253, 229, 93); }
+}
 @media (min-width: 375px) { 
     .navnav {
         font-size: 12px;
