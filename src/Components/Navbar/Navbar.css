@@ -39,9 +39,9 @@ header li:hover::after{
     width: 250px;
 }
 
-header, footer{
+header, footer, .card-product-grid {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    animation: background 5s alternate infinite;
+    animation: background 20s alternate infinite;
 }
 @-webkit-keyframes background {
     0% { background-color: #f99; }

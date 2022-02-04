@@ -19,7 +19,6 @@ export default function Home(props) {
         console.log(article);
         navigate('/')
     }
-    
 
     const plus = (item) => {
         if (item.stock > 0) {
