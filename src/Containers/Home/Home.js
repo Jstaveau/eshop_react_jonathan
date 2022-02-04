@@ -53,7 +53,7 @@ export default function Home(props) {
             <p className='m-0'>{produits[indexProd].nom} a été ajouté au panier</p>
         </div>
     </div>
-        <div className='d-flex flex-md-row flex-column justify-content-center align-items-center container-md flex-wrap'>
+        <div className='container-cards d-flex flex-md-row flex-column justify-content-center align-items-center container-md flex-wrap'>
             {produits.map((item, index) => {
                 if (item.categorie.includes(props.cat)) {
                     return <Cards 

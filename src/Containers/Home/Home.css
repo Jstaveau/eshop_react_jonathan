@@ -25,3 +25,58 @@
 .confirm-panier-container .ajout{
     transform: translateX(5%);
 }
+
+.container-cards > :nth-child(4n + 1){
+    animation: background-red 5s alternate infinite;
+}
+.container-cards > :nth-child(4n + 2){
+    animation: background-green 5s alternate infinite;
+}
+.container-cards > :nth-child(4n + 3){
+    animation: background-blue 5s alternate infinite;
+}
+.container-cards > :nth-child(4n + 4){
+    animation: background-yellow 5s alternate infinite;
+}
+.container-cards > :nth-child(4n + 4) > .container-img-cards{
+    animation: background-red 5s alternate infinite;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.container-cards > :nth-child(4n + 3) > .container-img-cards{
+    animation: background-yellow 5s alternate infinite;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.container-cards > :nth-child(4n + 2) > .container-img-cards{
+    animation: background-green 5s alternate infinite;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.container-cards > :nth-child(4n + 1) > .container-img-cards{
+    animation: background-blue 5s alternate infinite;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+
+@keyframes background-red {
+    0% { background-color: #f99; }
+    33% { background-color: #9f9; }
+    67% { background-color: #99f; }
+    100% { background-color: rgb(253, 229, 93); }
+}
+@keyframes background-green {
+    0% { background-color: #9f9; }
+    33% { background-color: #99f; }
+    67% { background-color: rgb(253, 229, 93); }
+    100% { background-color: #f99; }
+}
+@keyframes background-blue {
+    0% { background-color: #99f; }
+    33% { background-color: rgb(253, 229, 93); }
+    67% { background-color: #f99; }
+    100% { background-color: #9f9; }
+}
+@keyframes background-yellow {
+    0% { background-color: rgb(253, 229, 93); }
+    33% { background-color: #f99; }
+    67% { background-color: #9f9; }
+    100% { background-color: #99f; }
+}
